@@ -66,7 +66,7 @@ echo "GOOGLE_APPLICATION_CREDENTIALS=path/to/service-account.json" >> .env
    1. Download the JAR file:
    
       * Go to Maven Repository
-      * Download version 0.28.0 directly [here](spark-bigquery-with-dependencies_2.12-0.28.0.jar)
+      * Download version 0.28.0 (Direct link: [https//spark-bigquery-with-dependencies_2.12-0.28.0.jar](https://repo1.maven.org/maven2/com/google/cloud/spark/spark-bigquery-with-dependencies_2.12/0.28.0/spark-bigquery-with-dependencies_2.12-0.28.0.jar))
       * Save it to C:\spark_jars\
    
    2. Modify your Spark session creation in main.py:
