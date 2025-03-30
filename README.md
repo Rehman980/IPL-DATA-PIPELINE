@@ -67,7 +67,7 @@ echo "GOOGLE_APPLICATION_CREDENTIALS=path/to/service-account.json" >> .env
 
    * Go to Maven Repository
 
-   * Download version 0.28.0 Direct link: [spark-bigquery-with-dependencies_2.12-0.28.0.jar](spark-bigquery-with-dependencies_2.12-0.28.0.jar)
+   * Download version 0.28.0 Direct link: ![spark-bigquery-with-dependencies_2.12-0.28.0.jar](spark-bigquery-with-dependencies_2.12-0.28.0.jar)
 
    * Save it to C:\spark_jars\
 
