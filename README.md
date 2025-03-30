@@ -59,20 +59,20 @@ pip install -r requirements.txt
 echo "GCP_PROJECT=your-project-id" > .env
 echo "GCS_BUCKET=your-bucket-name" >> .env
 echo "GOOGLE_APPLICATION_CREDENTIALS=path/to/service-account.json" >> .env
+```
 
-
-# If any error occurs while creating spark session like: Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.28.0: not found]
-
-1. Download the JAR file:
-
-   * Go to Maven Repository
-
-   * Download version 0.28.0 Direct link: ![spark-bigquery-with-dependencies_2.12-0.28.0.jar](spark-bigquery-with-dependencies_2.12-0.28.0.jar)
-
-   * Save it to C:\spark_jars\
-
-2. Modify your Spark session creation in main.py:
-   spark = (SparkSession.builder
-         .appName("IPL Data Processing")
-         .config("spark.jars", "C:\\spark_jars\\spark-bigquery-with-dependencies_2.12-0.28.0.jar")
-         .getOrCreate())
+### 3. If any error occurs while creating spark session, like mentioned below
+```Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.28.0: not found]```
+   1. Download the JAR file:
+   
+      * Go to Maven Repository
+      * Download version 0.28.0 directly [here](spark-bigquery-with-dependencies_2.12-0.28.0.jar)
+      * Save it to C:\spark_jars\
+   
+   2. Modify your Spark session creation in main.py:
+   ```bash
+      spark = (SparkSession.builder
+            .appName("IPL Data Processing")
+            .config("spark.jars", "C:\\spark_jars\\spark-bigquery-with-dependencies_2.12-0.28.0.jar")
+            .getOrCreate())
+   ```
