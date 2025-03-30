@@ -38,6 +38,8 @@ A production-ready data pipeline for processing Indian Premier League (IPL) matc
 3. Create a service account with these roles:
    - BigQuery Data Editor
    - Storage Object Admin
+   - Storage Admin
+   - BigQuery Job User
 
 ### 2. Local Environment Setup
 ```bash
@@ -55,5 +57,22 @@ pip install -r requirements.txt
 
 # Set up environment variables (create .env file)
 echo "GCP_PROJECT=your-project-id" > .env
-echo "GCS_BUCKET=ipl-data-yourname" >> .env
+echo "GCS_BUCKET=your-bucket-name" >> .env
 echo "GOOGLE_APPLICATION_CREDENTIALS=path/to/service-account.json" >> .env
+
+
+# If any error occurs while creating spark session like: Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.28.0: not found]
+
+1. Download the JAR file:
+
+   * Go to Maven Repository
+
+   * Download version 0.28.0 (Direct link: spark-bigquery-with-dependencies_2.12-0.28.0.jar)
+
+   * Save it to C:\spark_jars\
+
+2. Modify your Spark session creation in main.py:
+   spark = (SparkSession.builder
+         .appName("IPL Data Processing")
+         .config("spark.jars", "C:\\spark_jars\\spark-bigquery-with-dependencies_2.12-0.28.0.jar")
+         .getOrCreate())
