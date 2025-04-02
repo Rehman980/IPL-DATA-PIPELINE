@@ -1,64 +1,36 @@
-import logging
 from pyspark.sql import SparkSession
-from config.settings import Settings
-from config.constants import Config
-from src.data_loader import DataLoader
-from src.data_transformer import DataTransformer
-from src.data_writer import DataWriter
-from src.data_quality import DataQualityChecker
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[logging.StreamHandler()]
-)
-logger = logging.getLogger(__name__)
-
-def create_spark_session() -> SparkSession:
-    """Create and configure Spark session"""
-    return ((SparkSession.builder
-         .appName("IPL Data Processing")
-         .config("spark.jars", "C:\\spark_jars\\spark-bigquery-with-dependencies_2.12-0.28.0.jar")
-         .getOrCreate()))
-
-def process_matches(spark: SparkSession):
-    """Process matches data"""
-    logger.info("Processing matches data")
-    
-    loader = DataLoader(spark)
-    transformer = DataTransformer()
-    writer = DataWriter(spark)
-    quality_checker = DataQualityChecker()
-    
-    # Load data
-    matches_df = loader.load_from_gcs(Config.RAW_MATCHES_PATH, "matches.json")
-    
-    # Validate data
-    if not quality_checker.run_checks(matches_df, "matches"):
-        raise ValueError("Data quality checks failed for matches data")
-    
-    # Transform data
-    matches_transformed = transformer.transform_matches(matches_df)
-    team_stats = transformer.create_team_stats(matches_transformed)
-    
-    # Write results
-    writer.write_to_bigquery(matches_transformed, Config.FACT_MATCHES_TABLE)
-    writer.write_to_bigquery(team_stats, Config.DIM_TEAMS_TABLE)
-    writer.write_to_gcs(matches_transformed, f"{Config.PROCESSED_PATH}matches/")
+from src.gcs_operations import GCSOperator
+from src.bq_operations import BigQueryOperator
+from src.transformations import IPLTransformer
+import os
 
 def main():
-    Settings.validate()
-    spark = create_spark_session()
-    
+    # Initialize clients
+    spark = SparkSession.builder.appName("IPL Processing").getOrCreate()
+    gcs = GCSOperator()
+    bq = BigQueryOperator()
+
     try:
-        process_matches(spark)
-        logger.info("Pipeline completed successfully")
-    except Exception as e:
-        logger.error(f"Pipeline failed: {str(e)}")
-        raise
+        # 1. Download data
+        local_matches = gcs.download(GCS.RAW_MATCHES_PATH)
+        
+        # 2. Process with PySpark
+        matches_df = spark.read.parquet(local_matches)
+        processed_df = IPLTransformer.process_matches(matches_df)
+        team_stats = IPLTransformer.calculate_team_stats(processed_df)
+        
+        # 3. Save and upload
+        temp_output = "temp_team_stats.parquet"
+        team_stats.toPandas().to_parquet(temp_output)
+        gcs.upload(temp_output, f"{GCS.PROCESSED_PATH}team_stats.parquet")
+        
+        # 4. Load to BigQuery
+        bq.dataframe_to_table(team_stats.toPandas(), f"{BigQuery.DATASET}.team_stats")
+        
     finally:
         spark.stop()
+        if os.path.exists(temp_output):
+            os.remove(temp_output)
 
 if __name__ == "__main__":
     main()

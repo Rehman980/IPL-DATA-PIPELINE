@@ -1,40 +1,15 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+# Data files
+data/raw/
+data/processed/
+temp_*.parquet
 
-# Virtual environment
+# Logs
+logs/*.log
+
+# Environments
 myenv/
-ENV/
+.env
 
 # IDE
 .vscode/
 .idea/
-
-# Environment variables
-.env
-
-# Spark
-spark-warehouse/
-derby.log
-
-# Data
-*.csv
-*.parquet
