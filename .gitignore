@@ -1,15 +1,9 @@
-# Data files
-data/raw/
-data/processed/
-temp_*.parquet
-
-# Logs
-logs/*.log
-
-# Environments
-myenv/
 .env
-
-# IDE
-.vscode/
-.idea/
+service-account.json
+__pycache__/
+*.pyc
+*.parquet
+*.csv
+data/
+myenv/
+input_files/saperated data/

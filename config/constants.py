@@ -1,8 +1,14 @@
-class GCS:
-    BUCKET = "your-bucket-name"
-    RAW_MATCHES_PATH = "raw/matches.parquet"
-    PROCESSED_PATH = "processed/"
+import os
+from dotenv import load_dotenv
 
-class BigQuery:
-    DATASET = "ipl"
-    MATCHES_TABLE = "fact_matches"
+load_dotenv()
+
+PROJECT_ID = os.getenv("GCP_PROJECT")
+BUCKET_NAME = os.getenv("GCS_BUCKET")
+DATASET = os.getenv("BQ_DATASET")
+STAGING_DATASET = os.getenv("STAGING_DATASET")
+
+print('PROJECT_ID:', PROJECT_ID)
+print('BUCKET_NAME:', BUCKET_NAME)
+print('DATASET:', DATASET)
+print('STAGING_DATASET:', STAGING_DATASET)
