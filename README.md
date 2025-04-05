@@ -86,7 +86,7 @@ ipl-data-pipeline/
              ```bash
              python .\input_files\input_files_saperator.py
              ```
-       * locate the 1st match's files and upload them into yous gcs bucket's "raw_data" folder
+       * locate the 1st match's files and upload them into yous gcs bucket's "raw/matches/" and "raw/deliveries/" folders
        * Repeat this steps with different match's data after each execution of the pipeline to test incremental load and analytics
      
   ## 🚀 Running the Pipeline
