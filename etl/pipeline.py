@@ -50,8 +50,8 @@ class Pipeline:
         last_matches = Watermark.get_last_processed("matches")
         last_deliveries = Watermark.get_last_processed("deliveries")
         
-        new_matches = self.gcs.download_new_files("matches/", last_matches)
-        new_deliveries = self.gcs.download_new_files("deliveries/", last_deliveries)
+        new_matches = self.gcs.download_new_files("raw/matches/", last_matches)
+        new_deliveries = self.gcs.download_new_files("raw/deliveries/", last_deliveries)
         
         if new_matches:
             self.bq.load_to_staging(new_matches, "matches")
