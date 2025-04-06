@@ -1,9 +1,9 @@
 from google.cloud import bigquery
-from config.constants import PROJECT_ID, DATASET
+from config.constants import PROJECT_ID, STAGING_DATASET
 from datetime import datetime
 
 class Watermark:
-    _TABLE = f"{PROJECT_ID}.{DATASET}.watermarks"
+    _TABLE = f"{PROJECT_ID}.{STAGING_DATASET}.watermarks"
     
     @classmethod
     def get_last_processed(cls, file_type):

@@ -1,31 +1,30 @@
-from pyspark.sql import SparkSession
 from utils.watermark import Watermark
 from connectors.gcs_connector import GCSConnector
 from connectors.bigquery_connector import BigQueryConnector
+from connectors.spark_connector import SparkConnector
 from utils.logging_config import logger
 from datetime import datetime
-from etl.transform import (
-    team_performance,
-    batsman_stats,
-    bowler_stats,
-    toss_impact,
-    player_of_match,
-    death_overs,
-    phase_comparison,
-    venue_analysis
-)
+from data_models.matches import matches_schema
+from data_models.deliveries import deliveries_schema
+from etl.transform import (team_performance, 
+                           batsman_stats, 
+                           bowler_stats, 
+                           toss_impact, 
+                           player_of_match, 
+                           death_overs, 
+                           phase_comparison, 
+                           venue_analysis)
 
 class Pipeline:
     def __init__(self):
         self.gcs = GCSConnector()
         self.bq = BigQueryConnector()
-        self.spark = SparkSession.builder \
-            .appName("IPL Analytics") \
-            .config(conf=SparkConfig.get_spark_config()) \
-            .getOrCreate()
+        self.spark_conn = SparkConnector()
     
     def run(self):
         logger.info("Starting IPL Analytics Pipeline")
+        self.spark = self.spark_conn.spark_start()
+        logger.info("Spark session started")
         
         try:
             # 1. Extract and Load to Staging
@@ -43,7 +42,8 @@ class Pipeline:
             logger.error(f"Pipeline failed: {str(e)}")
             raise
         finally:
-            self.spark.stop()
+            self.spark_conn.spark_end(self.spark)
+            logger.info("Spark session ended")
     
     def _extract_and_load(self):
         """Download new files and load to staging"""
@@ -87,9 +87,6 @@ class Pipeline:
     
     def _load_results(self, results):
         """Load results to BigQuery and GCS"""
+
         self.bq.write_results(results)
-        
-        # Export to GCS as CSV
-        for result_type, df in results.items():
-            gcs_path = f"analytics/{result_type}/{datetime.now().strftime('%Y%m%d')}.csv"
-            self.gcs.upload_csv(df, gcs_path)
+        self.gcs.upload_csv(results)
