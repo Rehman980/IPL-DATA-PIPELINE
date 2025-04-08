@@ -1,0 +1,299 @@
+2025-04-07 09:38:07,830 - ipl_analytics - INFO - Starting IPL Analytics Pipeline
+2025-04-07 09:38:42,473 - ipl_analytics - INFO - Spark session started
+2025-04-07 09:38:42,477 - ipl_analytics - INFO - Downloading new files from GCS
+2025-04-07 09:38:46,191 - ipl_analytics - ERROR - Pipeline failed: 404 Not found: Table ipl-pipeline-project:ipl_staging.watermarks was not found in location us-central1
+
+Location: us-central1
+Job ID: 7e26b78b-423a-4159-965c-d5945d5f5d0d
+
+2025-04-07 09:38:46,646 - ipl_analytics - INFO - Spark session ended
+2025-04-07 09:42:15,033 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-07 09:42:24,365 - ipl_data_pileline - INFO - Spark session started
+2025-04-07 09:42:24,365 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-07 09:42:32,808 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-07 09:42:32,828 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-07 09:42:35,474 - ipl_data_pileline - ERROR - Pipeline failed: [Errno 13] Permission denied: 'data/raw/matches/'
+2025-04-07 09:42:35,676 - ipl_data_pileline - INFO - Spark session ended
+2025-04-07 09:53:12,575 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-07 09:53:20,941 - ipl_data_pileline - INFO - Spark session started
+2025-04-07 09:53:20,941 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-07 09:53:29,521 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-07 09:53:29,524 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-07 09:53:31,839 - ipl_data_pileline - ERROR - Pipeline failed: [Errno 13] Permission denied: 'data/raw/matches/'
+2025-04-07 09:53:32,355 - ipl_data_pileline - INFO - Spark session ended
+2025-04-07 10:00:05,656 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-07 10:00:14,039 - ipl_data_pileline - INFO - Spark session started
+2025-04-07 10:00:14,039 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-07 10:00:20,596 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-07 10:00:20,596 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-07 10:00:20,608 - ipl_data_pileline - ERROR - Download failed: 'GCSConnector' object has no attribute 'gcs'
+2025-04-07 10:00:20,611 - ipl_data_pileline - ERROR - Pipeline failed: 'GCSConnector' object has no attribute 'gcs'
+2025-04-07 10:00:20,858 - ipl_data_pileline - INFO - Spark session ended
+2025-04-07 10:08:02,750 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-07 10:08:10,400 - ipl_data_pileline - INFO - Spark session started
+2025-04-07 10:08:10,402 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-07 10:08:19,346 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-07 10:08:19,346 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-07 10:08:23,704 - ipl_data_pileline - ERROR - Pipeline failed: [Errno 13] Permission denied: 'data\\raw\\raw\\matches'
+2025-04-07 10:08:24,218 - ipl_data_pileline - INFO - Spark session ended
+2025-04-07 10:09:18,494 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-07 10:09:28,141 - ipl_data_pileline - INFO - Spark session started
+2025-04-07 10:09:28,142 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-07 10:09:37,542 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-07 10:09:37,544 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-07 10:09:40,428 - ipl_data_pileline - ERROR - Pipeline failed: [Errno 13] Permission denied: 'data\\raw\\raw\\matches'
+2025-04-07 10:09:41,022 - ipl_data_pileline - INFO - Spark session ended
+2025-04-07 10:16:43,942 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-07 10:16:51,488 - ipl_data_pileline - INFO - Spark session started
+2025-04-07 10:16:51,488 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-07 10:16:59,692 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-07 10:16:59,693 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-07 10:17:03,525 - ipl_data_pileline - ERROR - Pipeline failed: [Errno 13] Permission denied: 'data\\raw\\matches'
+2025-04-07 10:17:03,872 - ipl_data_pileline - INFO - Spark session ended
+2025-04-07 10:37:48,581 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-07 10:37:58,098 - ipl_data_pileline - INFO - Spark session started
+2025-04-07 10:37:58,098 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-07 10:38:07,497 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-07 10:38:07,497 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-07 10:38:15,149 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-07 10:38:15,149 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-07 10:38:15,149 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-07 10:38:39,163 - ipl_data_pileline - ERROR - Pipeline failed: Please install the 'db-dtypes' package to use this function.
+2025-04-07 10:38:39,527 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 09:41:11,923 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 09:41:45,699 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 09:41:45,700 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 09:41:54,349 - ipl_data_pileline - INFO - Last processed matches: 2025-04-07 10:38:23.029076+00:00
+2025-04-08 09:41:54,351 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-07 10:38:33.512499+00:00
+2025-04-08 09:41:57,109 - ipl_data_pileline - INFO - Skipping file raw/matches/ as it is not new or not a parquet file
+2025-04-08 09:41:57,114 - ipl_data_pileline - ERROR - Pipeline failed: can't compare offset-naive and offset-aware datetimes
+2025-04-08 09:41:57,614 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 09:49:43,480 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 09:49:50,519 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 09:49:50,520 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 09:49:57,371 - ipl_data_pileline - INFO - Last processed matches: 2025-04-07 10:38:23.029076+00:00
+2025-04-08 09:49:57,374 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-07 10:38:33.512499+00:00
+2025-04-08 09:49:59,272 - ipl_data_pileline - INFO - Skipping file raw/matches/ as it is not new or not a parquet file
+2025-04-08 09:49:59,273 - ipl_data_pileline - ERROR - Pipeline failed: can't compare offset-naive and offset-aware datetimes
+2025-04-08 09:49:59,471 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 09:51:30,420 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 09:51:37,434 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 09:51:37,434 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 09:51:44,739 - ipl_data_pileline - INFO - Last processed matches: 2025-04-07 10:38:23.029076+00:00
+2025-04-08 09:51:44,742 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-07 10:38:33.512499+00:00
+2025-04-08 09:51:47,908 - ipl_data_pileline - INFO - Skipping file raw/matches/ as it is not new or not a parquet file
+2025-04-08 09:51:47,912 - ipl_data_pileline - ERROR - Pipeline failed: can't compare offset-naive and offset-aware datetimes
+2025-04-08 09:51:48,354 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 09:54:09,264 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 09:54:16,549 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 09:54:16,550 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 09:54:23,104 - ipl_data_pileline - INFO - Last processed matches: 2025-04-07 10:38:23.029076+00:00
+2025-04-08 09:54:23,106 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-07 10:38:33.512499+00:00
+2025-04-08 09:54:25,220 - ipl_data_pileline - INFO - Skipping file raw/matches/ as it is not new or not a parquet file
+2025-04-08 09:54:25,222 - ipl_data_pileline - INFO - Skipping file raw/matches/match_1.parquet as it is not new or not a parquet file
+2025-04-08 09:54:26,386 - ipl_data_pileline - INFO - Skipping file raw/deliveries/ as it is not new or not a parquet file
+2025-04-08 09:54:26,390 - ipl_data_pileline - INFO - Skipping file raw/deliveries/deliveries_1.parquet as it is not new or not a parquet file
+2025-04-08 09:54:26,393 - ipl_data_pileline - INFO - No new files to process
+2025-04-08 09:54:26,396 - ipl_data_pileline - INFO - New matches files: []
+2025-04-08 09:54:26,398 - ipl_data_pileline - INFO - New deliveries files: []
+2025-04-08 09:54:26,401 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 09:54:32,774 - ipl_data_pileline - ERROR - Pipeline failed: [CANNOT_ACCEPT_OBJECT_IN_TYPE] `DateType()` can not accept object `2008-04-18 00:00:00+00:00` in type `Timestamp`.
+2025-04-08 09:54:33,028 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 09:58:11,437 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 09:58:18,504 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 09:58:18,504 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 09:58:25,699 - ipl_data_pileline - INFO - Last processed matches: 2025-04-07 10:38:23.029076+00:00
+2025-04-08 09:58:25,700 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-07 10:38:33.512499+00:00
+2025-04-08 09:58:27,951 - ipl_data_pileline - INFO - Skipping file raw/matches/match_1.parquet as it is not new or not a parquet file
+2025-04-08 09:58:29,039 - ipl_data_pileline - INFO - Skipping file raw/deliveries/deliveries_1.parquet as it is not new or not a parquet file
+2025-04-08 09:58:29,040 - ipl_data_pileline - INFO - No new files to process
+2025-04-08 09:58:33,706 - ipl_data_pileline - ERROR - Pipeline failed: [CANNOT_ACCEPT_OBJECT_IN_TYPE] `DateType()` can not accept object `2008-04-18 00:00:00+00:00` in type `Timestamp`.
+2025-04-08 09:58:34,031 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 10:00:25,986 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 10:00:32,940 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 10:00:32,941 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 10:00:39,740 - ipl_data_pileline - INFO - Last processed matches: 2025-04-07 10:38:23.029076+00:00
+2025-04-08 10:00:39,742 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-07 10:38:33.512499+00:00
+2025-04-08 10:00:41,653 - ipl_data_pileline - INFO - Skipping file raw/matches/match_1.parquet as it is not new or not a parquet file
+2025-04-08 10:00:42,847 - ipl_data_pileline - INFO - Skipping file raw/deliveries/deliveries_1.parquet as it is not new or not a parquet file
+2025-04-08 10:00:42,849 - ipl_data_pileline - INFO - No new data to process
+2025-04-08 10:00:42,850 - ipl_data_pileline - INFO - Pipeline completed successfully
+2025-04-08 10:00:43,394 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 10:02:32,131 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 10:02:38,368 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 10:02:38,369 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 10:02:45,809 - ipl_data_pileline - INFO - Last processed matches: 2025-04-07 10:38:23.029076+00:00
+2025-04-08 10:02:45,811 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-07 10:38:33.512499+00:00
+2025-04-08 10:02:49,002 - ipl_data_pileline - INFO - No new data to process
+2025-04-08 10:02:49,004 - ipl_data_pileline - INFO - Pipeline completed successfully
+2025-04-08 10:02:49,309 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 10:06:29,551 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 10:06:35,860 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 10:06:35,861 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 10:06:43,011 - ipl_data_pileline - INFO - Last processed matches: 0001-01-01 00:00:00
+2025-04-08 10:06:43,014 - ipl_data_pileline - INFO - Last processed deliveries: 0001-01-01 00:00:00
+2025-04-08 10:06:45,029 - ipl_data_pileline - ERROR - Pipeline failed: can't compare offset-naive and offset-aware datetimes
+2025-04-08 10:06:45,224 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 10:07:58,006 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 10:08:04,049 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 10:08:04,050 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 10:08:07,662 - ipl_data_pileline - ERROR - Pipeline failed: type object 'datetime.datetime' has no attribute 'datetime'
+2025-04-08 10:08:07,859 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 10:11:45,623 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 10:11:52,138 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 10:11:52,139 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 10:11:59,000 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00
+2025-04-08 10:11:59,001 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00
+2025-04-08 10:12:02,357 - ipl_data_pileline - ERROR - Pipeline failed: can't compare offset-naive and offset-aware datetimes
+2025-04-08 10:12:02,540 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 10:15:03,810 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 10:16:09,787 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 10:16:15,789 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 10:16:15,789 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 10:16:22,544 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 10:16:22,545 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 10:16:28,618 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 10:16:28,619 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 10:16:28,620 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 10:16:53,333 - ipl_data_pileline - ERROR - Pipeline failed: [CANNOT_ACCEPT_OBJECT_IN_TYPE] `DateType()` can not accept object `2008-04-18 00:00:00+00:00` in type `Timestamp`.
+2025-04-08 10:16:53,605 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 11:56:36,454 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 11:56:43,581 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 11:56:43,582 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 11:56:51,384 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 11:56:51,385 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 11:56:58,317 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 11:56:58,318 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 11:56:58,319 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 11:57:05,282 - ipl_data_pileline - INFO - Failed to load ['data/raw/matches/match_1.parquet'] to ipl-pipeline-project.ipl_staging.matches_stage: 'NoneType' object has no attribute 'result'
+2025-04-08 11:57:11,908 - ipl_data_pileline - INFO - Failed to load ['data/raw/deliveries/deliveries_1.parquet'] to ipl-pipeline-project.ipl_staging.deliveries_stage: 'NoneType' object has no attribute 'result'
+2025-04-08 11:57:15,044 - ipl_data_pileline - ERROR - Pipeline failed: [CANNOT_ACCEPT_OBJECT_IN_TYPE] `DateType()` can not accept object `1208476800000000000` in type `int`.
+2025-04-08 11:57:15,274 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 12:04:20,531 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 12:04:29,725 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 12:04:29,726 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 12:04:36,418 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 12:04:36,419 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 12:04:42,360 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 12:04:42,361 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 12:04:42,362 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 12:04:47,980 - ipl_data_pileline - INFO - Failed to load ['data/raw/matches/match_1.parquet'] to ipl-pipeline-project.ipl_staging.matches_stage: 'NoneType' object has no attribute 'result'
+2025-04-08 12:04:51,975 - ipl_data_pileline - INFO - Failed to load ['data/raw/deliveries/deliveries_1.parquet'] to ipl-pipeline-project.ipl_staging.deliveries_stage: 'NoneType' object has no attribute 'result'
+2025-04-08 12:04:56,094 - ipl_data_pileline - ERROR - Pipeline failed: [CANNOT_ACCEPT_OBJECT_IN_TYPE] `DateType()` can not accept object `1208476800000000000` in type `int`.
+2025-04-08 12:04:56,440 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 12:13:02,679 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 12:13:09,987 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 12:13:09,988 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 12:13:16,739 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 12:13:16,742 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 12:13:22,922 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 12:13:22,923 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 12:13:22,923 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 12:13:30,483 - ipl_data_pileline - ERROR - Pipeline failed: 400 Provided Schema does not match Table ipl-pipeline-project:ipl_staging.matches_stage. Field date has changed type from INTEGER to TIMESTAMP
+2025-04-08 12:13:31,122 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 12:16:06,121 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 12:16:13,095 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 12:16:13,096 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 12:16:21,188 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 12:16:21,190 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 12:16:27,647 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 12:16:27,648 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 12:16:27,650 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 12:16:29,890 - ipl_data_pileline - ERROR - Pipeline failed: unsupported operand type(s) for +: 'StructType' and 'list'
+2025-04-08 12:16:30,186 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 12:55:09,458 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 12:55:16,558 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 12:55:16,559 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 12:55:43,628 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 12:55:43,629 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 12:55:59,179 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 12:55:59,181 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 12:55:59,182 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 12:58:38,274 - ipl_data_pileline - INFO - Failed to load ['data/raw/matches/match_1.parquet'] to ipl-pipeline-project.ipl_staging.matches_stage: 'NoneType' object has no attribute 'result'
+2025-04-08 12:58:42,192 - ipl_data_pileline - INFO - Failed to load ['data/raw/deliveries/deliveries_1.parquet'] to ipl-pipeline-project.ipl_staging.deliveries_stage: 'NoneType' object has no attribute 'result'
+2025-04-08 12:58:48,943 - ipl_data_pileline - ERROR - Pipeline failed: module 'etl.transform.team_performance' has no attribute 'analyze'
+2025-04-08 12:58:49,174 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:05:38,544 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:05:48,153 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:05:48,155 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:05:55,489 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 13:05:55,490 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 13:06:01,139 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 13:06:01,140 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 13:06:01,141 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 13:06:28,665 - ipl_data_pileline - ERROR - Pipeline failed: module 'etl.transform.team_performance' has no attribute 'analyze'
+2025-04-08 13:06:29,096 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:12:08,228 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:12:15,700 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:12:15,701 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:12:22,982 - ipl_data_pileline - INFO - Last processed matches: 2025-04-08 13:06:07.805287+00:00
+2025-04-08 13:12:22,983 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-08 13:06:16.167912+00:00
+2025-04-08 13:12:26,360 - ipl_data_pileline - INFO - No new data to process
+2025-04-08 13:12:26,362 - ipl_data_pileline - INFO - Pipeline completed successfully
+2025-04-08 13:12:26,602 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:14:05,588 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:14:12,875 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:14:12,876 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:14:19,327 - ipl_data_pileline - INFO - Last processed matches: 2025-04-08 13:06:07.805287+00:00
+2025-04-08 13:14:19,328 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-08 13:06:16.167912+00:00
+2025-04-08 13:14:22,573 - ipl_data_pileline - INFO - No new data to process
+2025-04-08 13:14:22,575 - ipl_data_pileline - INFO - Pipeline completed successfully
+2025-04-08 13:14:22,854 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:16:36,948 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:16:44,328 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:16:44,329 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:16:50,995 - ipl_data_pileline - INFO - Last processed matches: 2025-04-08 13:06:07.805287+00:00
+2025-04-08 13:16:50,996 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-08 13:06:16.167912+00:00
+2025-04-08 13:16:54,512 - ipl_data_pileline - INFO - No new data to process
+2025-04-08 13:16:54,513 - ipl_data_pileline - INFO - Pipeline completed successfully
+2025-04-08 13:16:54,808 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:18:21,269 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:18:28,619 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:18:28,619 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:18:35,778 - ipl_data_pileline - INFO - Last processed matches: 2025-04-08 13:06:07.805287+00:00
+2025-04-08 13:18:35,779 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-08 13:06:16.167912+00:00
+2025-04-08 13:18:39,193 - ipl_data_pileline - INFO - No new data to process
+2025-04-08 13:18:39,194 - ipl_data_pileline - INFO - Pipeline completed successfully
+2025-04-08 13:18:39,508 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:27:09,894 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:27:21,563 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:27:21,564 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:27:24,179 - ipl_data_pileline - ERROR - Pipeline failed: 400 Unrecognized name: updated_timestamp at [2:20]
+
+Location: us-central1
+Job ID: bfa22404-e6c6-41ef-890e-dd43654f34bf
+
+2025-04-08 13:27:24,298 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:31:21,830 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:31:31,035 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:31:31,036 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:31:38,179 - ipl_data_pileline - INFO - Last processed matches: 2017-01-01 12:00:00
+2025-04-08 13:31:38,182 - ipl_data_pileline - INFO - Last processed deliveries: 2017-01-01 12:00:00
+2025-04-08 13:31:40,024 - ipl_data_pileline - ERROR - Pipeline failed: can't compare offset-naive and offset-aware datetimes
+2025-04-08 13:31:40,431 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:35:21,088 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:35:29,384 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:35:29,385 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:35:38,714 - ipl_data_pileline - ERROR - Pipeline failed: 409 POST https://bigquery.googleapis.com/bigquery/v2/projects/ipl-pipeline-project/jobs?prettyPrint=false: Already Exists: Job ipl-pipeline-project:us-central1.7da9c3e5-cf02-486b-9844-c926bd45580a
+
+Location: None
+Job ID: 7da9c3e5-cf02-486b-9844-c926bd45580a
+
+2025-04-08 13:37:13,203 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:37:21,602 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:37:21,602 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:37:28,201 - ipl_data_pileline - INFO - Last processed matches: 2000-01-01 00:00:00+00:00
+2025-04-08 13:37:28,203 - ipl_data_pileline - INFO - Last processed deliveries: 2000-01-01 00:00:00+00:00
+2025-04-08 13:37:34,082 - ipl_data_pileline - INFO - New matches files: ['data/raw/matches/match_1.parquet']
+2025-04-08 13:37:34,083 - ipl_data_pileline - INFO - New deliveries files: ['data/raw/deliveries/deliveries_1.parquet']
+2025-04-08 13:37:34,085 - ipl_data_pileline - INFO - Loading new files to staging
+2025-04-08 13:37:58,529 - ipl_data_pileline - ERROR - Pipeline failed: module 'etl.transform.team_performance' has no attribute 'analyze'
+2025-04-08 13:37:58,937 - ipl_data_pileline - INFO - Spark session ended
+2025-04-08 13:39:46,700 - ipl_data_pileline - INFO - Starting IPL Analytics Pipeline
+2025-04-08 13:39:56,659 - ipl_data_pileline - INFO - Spark session started
+2025-04-08 13:39:56,661 - ipl_data_pileline - INFO - Downloading new files from GCS
+2025-04-08 13:40:03,577 - ipl_data_pileline - INFO - Last processed matches: 2025-04-08 08:07:39.614206+00:00
+2025-04-08 13:40:03,577 - ipl_data_pileline - INFO - Last processed deliveries: 2025-04-08 08:07:47.664382+00:00
+2025-04-08 13:40:06,819 - ipl_data_pileline - INFO - No new data to process
+2025-04-08 13:40:06,820 - ipl_data_pileline - INFO - Pipeline completed successfully
+2025-04-08 13:40:06,977 - ipl_data_pileline - INFO - Spark session ended

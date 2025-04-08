@@ -1,6 +1,7 @@
 from google.cloud import storage
 from config.constants import BUCKET_NAME
 import os
+from datetime import datetime
 
 class GCSConnector:
     def __init__(self):
@@ -13,7 +14,7 @@ class GCSConnector:
         new_files = []
         
         for blob in blobs:
-            if blob.updated.replace(tzinfo=None) > last_processed:
+            if blob.name.endswith(".parquet") and blob.updated > last_processed:
                 local_path = f"data/{blob.name}"
                 os.makedirs(os.path.dirname(local_path), exist_ok=True)
                 blob.download_to_filename(local_path)
@@ -21,10 +22,13 @@ class GCSConnector:
         
         return new_files
     
-    def upload_csv(self, df, destination_path):
+    def upload_csv(self, results):
         """Upload DataFrame as CSV to GCS"""
-        temp_path = f"temp_{destination_path.replace('/', '_')}.csv"
-        df.to_csv(temp_path, index=False)
-        blob = self.bucket.blob(destination_path)
-        blob.upload_from_filename(temp_path)
-        os.remove(temp_path)
+
+        for result_type, df in results.items():
+            destination_path = f"analytics/{result_type}/{datetime.now().strftime('%Y%m%d')}.csv"
+            temp_path = f"temp_{destination_path.replace('/', '_')}.csv"
+            df.to_csv(temp_path, index=False)
+            blob = self.bucket.blob(destination_path)
+            blob.upload_from_filename(temp_path)
+            os.remove(temp_path)

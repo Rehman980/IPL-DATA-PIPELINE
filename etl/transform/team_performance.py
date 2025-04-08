@@ -33,7 +33,7 @@ class TeamPerformance:
         ).select(
             batting_stats.batting_team.alias("team"),
             "matches_played",
-            "matches_won",
+            F.coalesce("matches_won",F.lit(0)).alias("matches_won"),
             "total_runs",
             "avg_runs_per_match",
             "runs_conceded",

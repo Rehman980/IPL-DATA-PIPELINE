@@ -32,9 +32,7 @@ ipl-data-pipeline/
 ├── connectors/ # GCS and BigQuery connectors
 ├── data_models/ # Data schemas
 ├── etl/ # Pipeline components
-│ ├── extract/ # Data extraction
-│ ├── transform/ # All transformations
-│ └── load/ # Data loading
+│ └── transform/ # All transformations
 |input_files/ # Contains input files for upload and testing
 | ├── combined_data/ # All the matches data
 | └── saperated_data/ # saperate files for each match will be stored here to upload one-by-one in gcs
