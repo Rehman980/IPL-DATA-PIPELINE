@@ -2,8 +2,20 @@ from utils.watermark import Watermark
 from connectors.gcs_connector import GCSConnector
 from connectors.bigquery_connector import BigQueryConnector
 from connectors.spark_connector import SparkConnector
+from connectors.spark_connector import SparkConnector
 from utils.logging_config import logger
 from pandas import Timestamp
+from data_models.matches import matches_schema
+from data_models.deliveries import deliveries_schema
+from etl.transform import (team_performance, 
+                           batsman_stats, 
+                           bowler_stats, 
+                           toss_impact, 
+                           player_of_match, 
+                           death_overs, 
+                           phase_comparison, 
+                           venue_analysis)
+from datetime import datetime
 from data_models.matches import matches_schema
 from data_models.deliveries import deliveries_schema
 from etl.transform import (team_performance, 
@@ -20,11 +32,15 @@ class Pipeline:
         self.gcs = GCSConnector()
         self.bq = BigQueryConnector()
         self.spark_conn = SparkConnector()
+        self.spark_conn = SparkConnector()
     
     def run(self):
         logger.info('Starting IPL Analytics Pipeline')
         self.spark = self.spark_conn.spark_start()
         logger.info('Spark session started')
+        logger.info("Starting IPL Analytics Pipeline")
+        self.spark = self.spark_conn.spark_start()
+        logger.info("Spark session started")
         
         try:
             # 1. Extract and Load to Staging
@@ -44,6 +60,8 @@ class Pipeline:
             logger.error(f"Pipeline failed: {str(e)}")
             raise
         finally:
+            self.spark_conn.spark_end(self.spark)
+            logger.info("Spark session ended")
             self.spark_conn.spark_end(self.spark)
             logger.info("Spark session ended")
     
@@ -107,7 +125,9 @@ class Pipeline:
     def _load_results(self, results):
         """Load results to BigQuery and GCS"""
         logger.info('Loading results to BigQuery')
+
         self.bq.write_results(results)
+        self.gcs.upload_csv(results)
         logger.info('Results loaded to BigQuery')
         logger.info('Uploading results to GCS')
         self.gcs.upload_csv(results)

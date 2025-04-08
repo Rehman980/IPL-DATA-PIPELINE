@@ -4,6 +4,7 @@ from pandas import Timestamp
 
 class Watermark:
     _TABLE = f"{PROJECT_ID}.{STAGING_DATASET}.watermarks"
+    _TABLE = f"{PROJECT_ID}.{STAGING_DATASET}.watermarks"
     
     @classmethod
     def get_last_processed(cls, file_type):
