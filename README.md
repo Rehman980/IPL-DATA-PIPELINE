@@ -117,15 +117,11 @@ ipl-data-pipeline/
       * Most awards
       * Performance by season
 
-  6. Death Overs Analysis
-      * Runs scored/conceded (overs 16-20)
-      * Wicket patterns
-
-  7. Phase Comparison
+  6. Phase Comparison
       * Powerplay (1-6) vs Middle (7-15) vs Death (16-20)
       * Run rate comparison
 
-  8. Venue Analysis
+  7. Venue Analysis
       * Pitch behavior
       * Average scores
       * Win patterns

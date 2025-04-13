@@ -4,7 +4,9 @@ __pycache__/
 *.pyc
 *.parquet
 *.csv
-data/
 myenv/
 input_files/saperated data/
-ipl_analytics.log
+logs/
+
+# Put temporary folder name as well
+temp/

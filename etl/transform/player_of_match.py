@@ -4,6 +4,6 @@ class PlayerOfMatch:
     @staticmethod
     def analyze(matches_df):
         return matches_df.groupBy("player_of_match").agg(
-            F.count("*").alias("awards"),
-            F.collect_set("Season").alias("seasons")
-        ).orderBy(F.desc("awards"))
+                    F.count("*").alias("awards"),
+                    F.concat_ws(",",F.collect_set("Season")).alias("seasons")
+                ).orderBy(F.desc("awards"))

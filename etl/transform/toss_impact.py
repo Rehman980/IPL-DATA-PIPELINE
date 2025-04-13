@@ -10,4 +10,8 @@ class TossImpact:
         ).withColumn(
             "win_percentage",
             F.round(F.col("matches_won") / F.col("total_matches") * 100, 2)
+        ).withColumnRenamed("toss_winner","team"
+        ).orderBy(
+            "toss_winner", 
+            "toss_decision"
         )
