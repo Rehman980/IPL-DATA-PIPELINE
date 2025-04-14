@@ -5,11 +5,11 @@ class BowlerStats:
     @staticmethod
     def analyze(deliveries_df):
         return deliveries_df.withColumn("over_run",
-                    F.sum("total_runs").over(Window.partitionBy("over"))
+                    F.sum("total_runs").over(Window.partitionBy("match_id","inning","over"))
                     ).withColumn("maiden_over", 
-                        F.when(F.col("over_run") == 0,"over")   
+                        F.when(F.col("over_run") == 0,F.col("over"))   
                     ).withColumn("wicket_taken",
-                            F.when((F.col("player_dismissed").isNotNull()) & (F.col("dismissal_kind") != "run out"), 1)
+                        F.when((F.col("player_dismissed").isNotNull()) & (~F.col("dismissal_kind").isin("run out","retired hurt","obstructing the field")), 1)
                         .otherwise(0)
                     ).withColumn("bowler_match_total_wicket", 
                             F.sum("wicket_taken").over(Window.partitionBy("bowler","match_id")) 
@@ -22,7 +22,7 @@ class BowlerStats:
                     ).groupBy("bowler").agg(
                         F.countDistinct("match_id").alias("matches_played"),
                         F.count("ball").alias("balls_bowled"),
-                        F.count(F.when((F.col("noball_runs") == 0) & (F.col("wide_runs") == 0), "ball")).alias("legal_balls"),
+                        F.count(F.when((F.col("noball_runs") == 0) & (F.col("wide_runs") == 0), F.col("ball"))).alias("legal_balls"),
                         F.sum("runs_conceded").alias("runs_conceded"),
                         F.sum("wicket_taken").alias("wickets_taken"),
                         F.sum(F.when(F.col("wide_runs") > 0, 1).otherwise(0)).alias("wides"),
@@ -30,8 +30,8 @@ class BowlerStats:
                         F.countDistinct("maiden_over").alias("maiden_overs"),
                         F.max(F.when(F.col("bowler_best_wicket_match") == 1, F.concat(F.col("bowler_match_total_wicket"),F.lit("/"),F.col("bowler_match_total_runs")))
                         .otherwise(0)).alias("best_bowling_figure"),
-                        F.countDistinct(F.when(F.col("bowler_match_total_wicket") >= 3, "match_id")).alias("three_wickets_haul"),
-                        F.countDistinct(F.when(F.col("bowler_match_total_wicket") >= 5, "match_id")).alias("five_wickets_haul"),
+                        F.countDistinct(F.when(F.col("bowler_match_total_wicket") >= 3, F.col("match_id"))).alias("three_wickets_haul"),
+                        F.countDistinct(F.when(F.col("bowler_match_total_wicket") >= 5, F.col("match_id"))).alias("five_wickets_haul"),
                     ).withColumn("overs_bowled",
                         F.concat(
                         F.floor(F.col("legal_balls")/6),

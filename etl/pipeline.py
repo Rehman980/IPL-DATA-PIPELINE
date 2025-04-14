@@ -35,6 +35,7 @@ class Pipeline:
             if load_status:
                 # 2. Transform
                 transformed_data = self._transform()
+                logger.info("Data transformed successfully")
                 # 3. Load Results
                 self._load_results(transformed_data)
             else:
@@ -85,6 +86,7 @@ class Pipeline:
     def _transform(self):
         """Execute all transformations"""
         # Get data from staging
+        logger.info('Loading data from staging')
         matches_df = self.spark.createDataFrame(
             self.bq.get_staging_data("matches"),
             schema=matches_schema
@@ -95,6 +97,7 @@ class Pipeline:
         )
 
         # Execute transformations
+        logger.info('Executing transformations')
         return {
             "team_performance": team_performance.TeamPerformance.analyze(matches_df, deliveries_df).toPandas(),
             "batsman_stats": batsman_stats.BatsmanStats.analyze(deliveries_df).toPandas(),

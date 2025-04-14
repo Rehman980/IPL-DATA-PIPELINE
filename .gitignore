@@ -3,10 +3,9 @@ service-account.json
 __pycache__/
 *.pyc
 *.parquet
-*.csv
 myenv/
 input_files/saperated data/
 logs/
 
-# Put temporary folder name as well
+# Put temporary folder name as well, same as added in .env file
 temp/
