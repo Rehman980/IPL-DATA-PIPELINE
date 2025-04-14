@@ -10,7 +10,7 @@ This pipeline processes IPL match data from:
 
 Key features:
 - Incremental processing of new data
-- 8 analytical transformations
+- 7 analytical transformations
 - GCS → BigQuery → PySpark → BigQuery/GCS flow
 - Production-ready with logging, validation, and watermark tracking
 
@@ -139,11 +139,10 @@ ipl-data-pipeline/
     * bowler_metrics
     * toss_analysis
     * pom_analysis
-    * death_over_stats
     * match_phase_stats
     * venue_metrics
   * GCS Exports:
-    * CSV files in gs://your-bucket/analytics/[metric_type]/[date].csv
+    * CSV files in gs://your-bucket/analytics/[metric_type]/[datetime(H)].csv
 
   ## 🔄 Incremental Processing
   The pipeline automatically:
